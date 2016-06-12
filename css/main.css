@@ -30,7 +30,7 @@ body.locked{
 .no-margin-bottom{
   margin-bottom: 0;
 }
-.cirlce{
+.circle{
   border-radius: 50%;
 }
 .right{
@@ -84,7 +84,7 @@ body.locked{
 }
 a{
   text-decoration: none;
-  color: var(--theme-color);
+  color: #4CAF50;
 }
 a:hover{
   color: #7E57E2;
@@ -92,9 +92,6 @@ a:hover{
 hr.divider{
   border: none;
   border-bottom: 1px solid #e2e2e2;
-}
-.shadow-1dp{
-  box-shadow: 0 0 1px rgba(0, 0, 0, 1);
 }
 .shadow-2dp{
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
@@ -121,8 +118,18 @@ hr.divider{
   align-items: center;
   justify-content: center;
 }
+.layout-flex.end-end{
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.layout-flex.v-end{
+  align-items: flex-end;
+}
 .layout-flex.wrap{
   flex-wrap: wrap;
+}
+.flex{
+  flex:1;
 }
 /******************************
   END BROWSER OVERRIDE & GLOBAL STYLES
@@ -132,12 +139,12 @@ hr.divider{
       MAIN LAYOUT STYLES
 ******************************/
 header{
-  position: relative;
+  position: fixed;
   top: 0;left: 0;
   width: 100%;
-  height: 200px;
+  height: 80px;
   line-height: 80px;
-  background: var(--theme-color);
+  background: #4CAF50;
   color: #fff;
   z-index: 9;
   display: flex;
@@ -162,15 +169,17 @@ header > .logo a{
 }
 header > .header-btn{
   display: none;
+  line-height: 45px;
 }
 nav{
+  position: fixed;
   top: 0;left: 0;
   padding: 15px 0;
   height: 40px;
   line-height: 40px;
-  top: 180px;
-  /*width: 100%;*/
-  background: var(--theme-light);
+  top:80px;
+  width: 100%;
+  background: #f8f8f8;
   z-index: 999;
   display: flex;
 }
@@ -189,16 +198,16 @@ nav > ul li:first-child{
   border-left: none;
 }
 nav > ul a{
-  color: var(--text-color-dark);
+  color: rgba(0,0,0,0.5);
   padding: 12px 60px;
   text-align: center;
 }
 nav > ul li a:hover{
-  color: var(--text-color-dark) !important;
+  color: rgba(0,0,0,0.5) !important;
   background: #d9d9d9 !important;
 }
 nav > ul li.active a, nav > ul li.active a:hover{
-  color: var(--theme-color) !important;
+  color: #4CAF50 !important;
 }
 nav > ul li a .zmdi{
     /*font-size: 25px;*/
@@ -206,6 +215,7 @@ nav > ul li a .zmdi{
   }
 nav > .cover-photo{
   display: none;
+  background: url(../images/bcs.png); background-size: cover;
 }
 @media all and (max-width: 990px) {
   header{
@@ -223,7 +233,6 @@ nav > .cover-photo{
     color:white !important;
   }
   nav{
-    position: absolute;
     padding: 0;
     top:0;
     width: 250px;
@@ -270,16 +279,16 @@ nav > .cover-photo{
     padding: 0;
     padding-left: 50px;
     /*border-bottom: 1px dotted red;*/
-    font-size: 18px;
+    font-size: 12px;
   }
   nav > ul li.active a{
     background: rgba(0,0,0,0.05);
   }
   nav > ul li a .zmdi{
-    font-size: 25px;
-    margin-right: 15px;
+    font-size: 17px;
+    margin-right: 10px;
     position: absolute;
-    left: 10px;top: 10px;
+    left: 10px;top: 15px;
   }
   #main{
     padding-top: 60px !important;
@@ -290,16 +299,11 @@ nav > .cover-photo{
 }
 #main{
   position: relative;
-  top:50px;left: 0;
+  top:0;left: 0;
+  padding-top: 150px;
   height: calc(100% - 70px);
   width: 100%;
   display: flex;
-}
-@media all and (max-width: 990px) {
-  #main{
-    margin-top: -50px;
-    top:0px;
-  }
 }
 aside{
   height: 100%;
@@ -336,7 +340,7 @@ aside > ul li a{
   height: 48px;
   line-height: 48px;
   padding: 0 8px;
-  color: var(--text-color-dark);
+  color: rgba(0,0,0,0.5);
 }
 aside > ul li a::after{
   content: "";
@@ -352,10 +356,10 @@ aside > ul li a::after{
   transition: all 0.15s ease-out;
 }
 aside > ul li.active a, aside > ul li.active a:hover{
-  color: var(--theme-color); /*retain active color on hover*/
+  color: #4CAF50; /*retain active color on hover*/
 }
 aside > ul li a:hover{
-  color: var(--text-color-dark); /*override default hover color for a tags*/
+  color: rgba(0,0,0,0.5); /*override default hover color for a tags*/
 }
 aside > ul li a:hover::after, aside > ul li.active a::after{
   width: 100%;
@@ -364,10 +368,15 @@ aside > ul li a:hover::after, aside > ul li.active a::after{
   background: rgba(0,0,0,0.05);
 }
 #content{
-  min-height: calc(100vh - 310px);
+  min-height: calc(100vh - 180px);
   /*width: 100%;*/
   margin:auto;
   flex:1;
+}
+@media all and (max-width: 992px) {
+  #content{
+    min-height: calc(100vh - 150px);
+  }
 }
 section{
   position: relative;
@@ -442,7 +451,7 @@ section > p{
   text-align: center;
   font-size: 18px;
   font-family: verdana;
-  background: var(--theme-color);
+  background: #4CAF50;
   color: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.26);
 }
@@ -458,16 +467,16 @@ section > p{
   background: transparent;
   min-width: 10px;
   margin: 0 1px;
-  color: var(--text-color-dark);
+  color: rgba(0,0,0,0.5);
 }
 .btn-flat:hover{
   background: transparent;
   color: #aaa;
 }
 footer{
-  margin-top: 50px;
-  background: var(--theme-light);
-  min-height: 200px;
+  margin-top: 90px;
+  background: #f8f8f8;
+  /*min-height: 200px;*/
   width: 100%;
   position: relative;
   top: 0;
@@ -481,15 +490,17 @@ footer > .copyright{
   height: 70px;
   line-height: 80px;
   color: #fff;
-  background: var(--theme-lighter);
+  background: #66BB6A;
 }
 
 /*LISTS*/
 .list-group{
   padding: 15px;
+  padding-top: 5px;
 }
 .list-group > .title{
-  font-size: 24px; margin: 0;margin-top: 15px;
+  font-size: 24px; margin: 0;
+  /*margin-top: 15px;*/
 }
 .list-group > .list{
   margin: 0 15px;
@@ -539,7 +550,7 @@ footer > .copyright{
   margin-bottom: 3px;
 }
 .list-item > h3 a{
-  color: var(--text-color-dark);
+  color: rgba(0,0,0,0.5);
 }
 .list-item > p{
   padding: 0;
@@ -552,37 +563,58 @@ footer > .copyright{
 .card{
   background: white;
   box-shadow: 0 0 1px #777;
+  width: 100%;
 }
 .card > img{
   background: #aaa;
-  width: 100%;
-  height: 130px;
+  width: inherit;
+  height: 150px;
+  overflow: hidden;
+}
+@media all and (max-width: 992px){
+  .card > img{
+    height: 250px;
+  }
 }
 .card > .card-content{
   margin-top: -5px;
   padding:15px 10px;
 }
 .card > .card-content .caption{
-  width: 100%;
-  height: 40px;
+  position: relative;
+  height: 45px;
+  width: 50%;
+  overflow: hidden;
 }
 .card > .card-content .caption h3, .card > .card-content .caption p{
   overflow: hidden;
-  white-space: nowrap;
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  max-height: 50px;
+  margin-top: 3px;
+}
+.card > .card-content .caption ~ .layout-flex{
+  width: 40px;
 }
 /*END CARDS
 
 /*GRID SYSTEM*/
 .row{
-  position: relative;
   margin-top: 10px;
+  width: 100%;
 }
 .col{
   display: inline-block;
   margin-left: 1px;
   padding: 3px;
+  overflow: hidden;
+}
+@media all and (max-width: 992px){
+  .col{
+    padding: 15px;
+    display: block;
+    width: calc(100% - 30px) !important;
+  }
 }
 .col.col-1{
   width: calc(8.333% - 10px);
@@ -630,12 +662,14 @@ footer > .copyright{
   .center-text-on-less-lg{
     text-align: center;
   }
-}
-@media all and (max-width: 992px){
   .show-on-lg-only{
     display: none;
   }
+  .full-width-on-sm{
+    width: 100vw;
+  }
 }
+
 /*******************
   END RESPONSIVE
 *******************/
