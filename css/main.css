@@ -722,7 +722,7 @@ footer > .copyright{
 }
 .card > .card-content .caption{
   position: relative;
-  max-height: 45px;
+  max-height: 60px;
   width: 50%;
   overflow: hidden;
 }
