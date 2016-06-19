@@ -3,6 +3,7 @@ var previewing = false;
 var shadow = document.querySelector('#shadow');
 var curIndex = 0;
 var slideshow;
+var audios = document.querySelectorAll('audio');
 var audio = document.querySelector('audio');
 var audioSrcIndex = 0;
 var audioSources = ["suddenly.mp3", "another.mp3", "beauty.mp3", "white.mp3"];
@@ -20,15 +21,17 @@ window.onload = function(){
 			removeShadow();
 	}, false)
 
-	audio.addEventListener('ended', function(){
-		if(audioSrcIndex == audioSources.length - 1)
-			audioSrcIndex = 0;
-		else
-			audioSrcIndex+=1;
+	if(audios.length){
+		audio.addEventListener('ended', function(){
+			if(audioSrcIndex == audioSources.length - 1)
+				audioSrcIndex = 0;
+			else
+				audioSrcIndex+=1;
 
-		audio.src = "music/"+audioSources[audioSrcIndex];
-		audio.play();
-	}, false);
+			audio.src = "music/"+audioSources[audioSrcIndex];
+			audio.play();
+		}, false);
+	}
 
 	var galleryImages = document.querySelectorAll('.gallery-image');
 	var previewImg = document.querySelector('.preview-image');
