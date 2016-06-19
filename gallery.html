@@ -10,8 +10,18 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div id="shadow" onclick="closeMenu()"></div>
-	<audio src="music/suddenly.mp3" autopla></audio>
+	<div id="shadow" class="layout-flex center-center as-column" onclick="removeShadow()">
+		<i class="zmdi zmdi-globe animated bounce infinite"></i>
+		<br>
+		<span class="animated infinite tada">loading....</span>
+	</div>
+	<img src="images/girls.jpg" alt="" class="preview-image">
+	<audio src="music/suddenly.mp3"></audio>
+	<i class="zmdi shadow-closer" onclick="removeShadow()"></i>
+	<i class="zmdi more-btn" onclick="showMenu()"></i>
+	<div id="slide-show-container"></div>
+	<div id="caption"></div>
+
 	<header class="shadow-2dp">
 		<a href="javascript:void(0);" class="btn btn-flat header-btn" style="align-self: center;" onclick="toggleMenu()"><i class="zmdi zmdi-menu"></i></a>
 		<div class="logo"><a href="index.html">Computer Science IFM</a></div>
@@ -28,47 +38,29 @@
 	</nav>
 	<div id="main">
 		<div id="content">
-			<section class="placeholder-bg layout-flex as-column center-center">
+			<section class="full placeholder-bg layout-flex as-column center-center">
 				<br>
 				<h1 style="font-size: 35px">Gallery</h1>
 				<p style="padding: 0 60px; font-size: 23px">
 					Her are some pics from varios areas of our course and students.
 				</p>
-				<!-- <br> -->
-				<a href="javascript:void(0);" onclick="playSlideShow()" class="btn btn-flat">PLAY SLIDESHOW</a>
+				<br>
+				<a style="background: orange" href="javascript:void(0);" onclick="playSlideShow()" class="btn btn-fla show-on-lg-only">PLAY SLIDESHOW</a>
 				<br>
 			</section>
-			<style>
-				img{
-					width: 33%;
-					height: 200px;
-					margin-right: 0.333%;
-					margin-bottom: 5px;
-					cursor: pointer;
-				}
-				img:hover{
-					transition: transform 0.25s ease-out;
-					transform: scale(1.06);
-					box-shadow: 0 0 10px 1px rgba(0,0,0,0.6);
-				}
-				@media all and (max-width: 600px){
-					img{
-						width: calc(50% - 4px);
-						margin: 2px 2px;
-					}
-				}
-			</style>
-			<section class="layout-flex wrap">
-				<img src="images/bcs.png" alt="">
-				<img src="images/bcs2.jpg" alt="">
-				<img src="images/bcs3.jpg" alt="">
-				<img src="images/bcs.png" alt="">
-				<img src="images/bcs2.jpg" alt="">
-				<img src="images/bcs3.jpg" alt="">
-				<img src="images/bcs.png" alt="">
-				<img src="images/bcs2.jpg" alt="">
-				<img src="images/bcs3.jpg" alt="">
+			<section id="gallery" class="full layout-flex wrap">
+				<img data-caption="Happy computer science students" class="gallery-image" src="images/bcs.png" alt="">
+				<img data-caption="Behind code screen" class="gallery-image" src="images/codescreen.jpg" alt="">
+				<img data-caption="Image description" class="gallery-image" src="images/bcs3.jpg" alt="">
+				<img data-caption="That smile tho" class="gallery-image" src="images/bcs4.jpg" alt="">
+				<img data-caption="Sample php code" class="gallery-image" src="images/code.jpg" alt="">
+				<img data-caption="Anande Sawe" class="gallery-image" src="images/anne2.jpg" alt="">
+				<img data-caption="Pretty faces" class="gallery-image" src="images/owl-slide3.jpg" alt="">
+				<img data-caption="Girls, girls, girls" class="gallery-image" src="images/girls.jpg" alt="">
+				<img data-caption="Tucheze app" class="gallery-image" src="images/tucheze.jpg" alt="">
+				<img data-caption="Walter Kimaro" class="gallery-image" src="images/naura.jpg" alt="">
 			</section>
+			<a href="javascript:void(0);" onclick="playSlideShow()" class="btn btn-fab show-on-sm-only"><i class="zmdi zmdi-play"></i></a>
 		</div>
 	</div>
 	<footer class="shadow-4dp">

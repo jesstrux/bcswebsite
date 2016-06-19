@@ -10,7 +10,12 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div id="shadow" onclick="closeMenu()"></div>
+	<div id="shadow" class="layout-flex center-center as-column" onclick="removeShadow()">
+		<i class="zmdi zmdi-globe animated bounce infinite"></i>
+		<br>
+		<span class="animated infinite tada">loading....</span>
+	</div>
+	<i class="zmdi shadow-closer" onclick="removeShadow()"></i>
 	<header class="shadow-2dp">
 		<a href="javascript:void(0);" class="btn btn-flat header-btn" style="align-self: center;" onclick="toggleMenu()"><i class="zmdi zmdi-menu"></i></a>
 		<div class="logo"><a href="index.html">Computer Science IFM</a></div>
