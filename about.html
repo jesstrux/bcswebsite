@@ -3,43 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-	<title>IFM - BCS</title>
+	<meta name="theme-color" content="#4CAF50">
+	<title>IFM - CS</title>
 	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<div id="shadow" class="layout-flex center-center as-column" onclick="removeShadow()">
+		<i class="zmdi zmdi-globe animated bounce infinite"></i>
+		<br>
+		<span class="animated infinite tada">loading....</span>
+	</div>
+	<i class="zmdi shadow-closer" onclick="removeShadow()"></i>
 	<header class="shadow-2dp">
-		<div class="logo"><a href="#">BCS Website</a></div>
-		<div style="margin-left: auto;margin-right:50px;"><a href="#contact" style="color: white">Contact us</a></div>
+		<a href="javascript:void(0);" class="btn btn-flat header-btn" style="align-self: center;" onclick="toggleMenu()"><i class="zmdi zmdi-menu"></i></a>
+		<div class="logo"><a href="index.html">Computer Science IFM</a></div>
 	</header>
-	<header class="shadow-2dp last">
+	<nav class="shadow-2dp">
+		<div class="cover-photo placeholder-bg" style="height: 200px;"></div>
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li class="active"><a href="#">About us</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
-			<li><a href="#">Link 4</a></li>
-			<li><a href="#">Link 5</a></li>
-			<li><a href="#">Link 6</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
+			<li class="active"><a href="#"><i class="zmdi zmdi-info-outline"></i>About us</a></li>
+			<li><a href="#"><i class="zmdi zmdi-accounts"></i>Staff</a></li>
+			<li><a href="#"><i class="zmdi zmdi-collection-item"></i>Courses</a></li>
+			<li><a href="gallery.html"><i class="zmdi zmdi-collection-image"></i>Gallery</a></li>
 		</ul>
-	</header>
+	</nav>
 	<div id="main">
 		<div id="content">
 			<section class="placeholder-bg layout-flex as-column center-center">
 				<br>
 				<h1 style="font-size: 35px">About Us</h1>
-				<p style="padding: 0 60px; font-size: 23px">Here you will learn about just why this is the right place for you or your loved ones to be,Chrome faded-ware Legba convenience store ablative drone receding grenade. Cartel drugs geodesic tank-traps physical bomb Shibuya dissident. San Francisco range-rover otaku nano-dolphin faded shanty town tanto artisanal. Man tattoo bicycle free-market post-carbon paranoid artisanal car j-pop. Cardboard rifle 3D-printed physical numinous bomb knife hacker wonton soup human assault courier. Math-urban construct BASE jump wonton soup Shib always contact us with your concerns and we will be more than eager to sort them out for you.</p>
+				<p style="padding: 10px; font-size: 23px">Here you will learn about just why this is the right place for you or your loved ones to be,Chro.</p>
 				<br><br>
-			</section>
-
-			<br>
-			<section>
-				<h2>News feed</h2>
-				<hr class="divider">
 			</section>
 		</div>
 	</div>
+	<footer>
+		<div class="copyright">
+			Copyright &copy; BCS IFM 2016.
+		</div>
+	</footer>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

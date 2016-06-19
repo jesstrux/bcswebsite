@@ -3,28 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-	<title>IFM BCS</title>
+	<meta name="theme-color" content="#4CAF50">
+	<title>IFM CS</title>
 	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<div id="shadow" class="layout-flex center-center as-column" onclick="removeShadow()">
+		<i class="zmdi zmdi-globe animated bounce infinite"></i>
+		<br>
+		<span class="animated infinite tada">loading....</span>
+	</div>
+	<i class="zmdi shadow-closer" onclick="removeShadow()"></i>
 	<header class="shadow-2dp">
-		<div class="logo"><a href="#">BCS Website</a></div>
-		<div style="margin-left: auto;margin-right:50px;"><a href="#contact" style="color: white">Contact us</a></div>
+		<a href="javascript:void(0);" class="btn btn-flat header-btn" style="align-self: center;" onclick="toggleMenu()"><i class="zmdi zmdi-menu"></i></a>
+		<div class="logo"><a href="#">Computer Science IFM</a></div>
 	</header>
-	<header class="shadow-2dp last">
+	<nav class="shadow-2dp last">
+		<div class="cover-photo placeholder-b" style="height: 200px;"></div>
 		<ul>
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="#">Link 2</a></li>
-			<li><a href="#">Link 3</a></li>
-			<li><a href="#">Link 4</a></li>
-			<li><a href="#">Link 5</a></li>
-			<li><a href="#">Link 6</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
+			<li class="active"><a href="#"><i class="zmdi zmdi-home"></i>Home</a></li>
+			<li><a href="about.html"><i class="zmdi zmdi-info-outline"></i>About</a></li>
+			<li><a href="#"><i class="zmdi zmdi-collection-item"></i>Courses</a></li>
+			<li><a href="gallery.html"><i class="zmdi zmdi-collection-image"></i>Gallery</a></li>
 		</ul>
-	</header>
+	</nav>
 	<div id="main">
 		<!-- <aside class="shadow-2d">
 			<ul>
@@ -36,24 +40,225 @@
 			</ul>
 		</aside> -->
 		<div id="content">
-			<section class="placeholder-bg layout-flex as-column center-center" style="width:95%;left:3.5%;margin-top: -10px; min-height: 300px;padding: 15px 0; margin-bottom: 50px;">
-				<br>
-				<h1 style="font-size: 35px">Welcome to the BCS department IFM</h1>
-				<p style="padding: 0 60px; font-size: 23px">Here you will learn about just why this is the right place for you or your loved ones to be,Chrome faded-ware Legba convenience store ablative drone receding grenade. Cartel drugs geodesic tank-traps physical bomb Shibuya dissident. San Francisco range-rover otaku nano-dolphin faded shanty town tanto artisanal. Man tattoo bicycle free-market post-carbon paranoid artisanal car j-pop. Cardboard rifle 3D-printed physical numinous bomb knife hacker wonton soup human assault courier. Math-urban construct BASE jump wonton soup Shib always contact us with your concerns and we will be more than eager to sort them out for you.</p>
-				<br><br>
+			<section id="home-banner" class="placeholder-bg layout-flex as-column center-center">
 			</section>
+			<!-- <center><p>wa</p></center> -->
+			<!-- <br> -->
+			<section class="layout-flex">
+				<div class="full-width-on-sm" style="flex:1; min-height: 120px; margin-righ:10px;padding-top: 0;padding: 0;">
+					<h2 class="center-text-on-less-lg" style="font-size: 30px; margin: 0;">Welcome to the CS department IFM</h2>
+					<p class="text-justify" style="padding: 20px; font-size: 21px">&emsp;At computer science IFM we beleive that learn about just why this is the right place for you or your loved ones to be,Chrome faded-ware Legba convenience store ablative drone receding grenade. Cartel drugs geodesi.</p>
+					<br>
+					<h3 class="center-text-on-less-lg" style="font-size: 21px; margin: 0;">HIGHLIGHTS</h3>
+					<br><br>
+					<h5 class="no-margin center-text-on-less-lg" style="font-size: 18px;">Projects</h5>
+					<p class="center-text-on-less-lg text-justify" style="font-size: 21px">
+					&emsp;Some examples of outstanding work done by students, alumnis and our in college staff of the computer science department.
+					</p>
 
-			<br>
-			<section>
-				<h2>News feed</h2>
-				<hr class="divider">
+					<div class="row">
+						<div class="col col-6">
+							<div class="card" data-caption="Tucheze">
+								<img src="images/tucheze.jpg" alt="Tucheze">
+								<div class="card-content">
+									<div class="layout-flex">
+										<div class="caption flex">
+											<h3 class="no-margin">Tucheze</h3>
+											<p class="no-margin"><span>&emsp;</span>For their final year project, long time friends Juma and Stacy decided to go in a completely different direction from what is considered the norm, they decided to work on something to capture young children away from useless games, so they created an educative game experience where a child could enjoy and still get educated, how cool is that?</p>
+										</div>
+										<div class="layout-flex end-end" style="width: 60px;">
+											<a href="javascript:void(0);">view</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-6">
+							<div class="card" data-caption="Mass Appeal">
+								<img src="images/mario.jpg" alt="Mass appeal image">
+								<div class="card-content">
+									<div class="layout-flex">
+										<div class="caption flex">
+											<h3 class="no-margin">Mass Appeal</h3>
+											<p class="no-margin"><span>&emsp;</span>
+												Just after completing the advanced web technologies course, third year student Jules Bama decided to challenge himself by build a web version of his favorite childhood game super mario after adding in some modern flair, it turned out to be quite fun and addictive and has since then gained him so much popularity among his peers.
+											</p>
+										</div>
+										<div class="layout-flex end-end" style="width: 60px;">
+											<a href="javascript:void(0);">view</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br><br>
+					<h5 class="no-margin center-text-on-less-lg" style="font-size: 18px;">Alumni</h5>
+					<p class="center-text-on-less-lg text-justify" style="font-size: 21px">
+					&emsp;Students graduating from IFM have been quite successfull out in the industry, here are some of the few.
+					</p>
+
+					<div class="row">
+						<div class="col col-4">
+							<div class="card" data-caption="Perfect Nelson">
+								<img src="images/perfect2.jpg" alt="Perfect Nelson image">
+								<div class="card-content">
+									<div class="layout-flex">
+										<div class="caption flex">
+											<h3 class="no-margin">Perfect Nelson</h3>
+											<p class="no-margin"><span>&emsp;</span>Since graduating from IFM in June 2007, Perfect has started a software company grown it to a net worth of over sixty million, employed over a hundred employees, delivered on over two hundred and fifty contracts and gotten mentioned as an upcoming millionaire by forbes. We think this is pretty impressive. Way to go Perfect.</p>
+										</div>
+										<div class="layout-flex end-end">
+											<a href="javascript:void(0);">view</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-4">
+							<div class="card" data-caption="Annabel Kapama">
+								<img src="images/anne2.jpg" alt="Annabel Kapama's image">
+								<div class="card-content">
+									<div class="layout-flex">
+										<div class="caption flex">
+											<h3 class="no-margin">Anande Sawe</h3>
+											<p class="no-margin"><span>&emsp;</span>Anne joined forces with her high school best friend and raptured the world of women in tech, their movement <a target="_blank" href="twitter.com/tags/#sheCodesForChange">#sheCodesForChange</a> has gained huge popularity on twitter and their company has hosted over two hundred events all over the country, reaching over five hundred thousand girls. She is considered the nation's tech Florence Nightingale.</p>
+										</div>
+										<div class="layout-flex end-end">
+											<a href="javascript:void(0);">view</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col col-4">
+							<div class="card" data-caption="Ilakoze Jumanne">
+								<img src="images/koze.jpg" alt="Koze's image">
+								<div class="card-content">
+									<div class="layout-flex">
+										<div class="caption flex">
+											<h3 class="no-margin">
+												Koze Jumanne
+											</h3>
+											<p class="no-margin">
+												<span>&emsp;</span>
+												Moview C.E.O IlaKoze Jumanne or Koze for short decided to teach himself how to make android applications taking advantage of the Java skills he learnt when he was at IFM, his very first app Moview has grown into two countries(Kenya and Tanzania) and has had over five thousand downloads since it was launched early last year.
+											</p>
+										</div>
+										<div class="layout-flex end-end">
+											<a href="javascript:void(0);">view</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="home-right-nav" class="list-group show-on-lg-only">
+					<h3 class="title">News &amp; Events</h3>
+
+					<div class="list">
+						<h3 class="title">News</h3>
+						<hr class="divider">
+
+						<div class="list-item">
+							<h3><a href="#">Career day win</a></h3>
+							<p>The department of computer science came out victorious during the recently held career day event courtesy of some....</p>
+						</div>
+
+						<div class="list-item">
+							<h3><a href="#">ICT Workshop</a></h3>
+							<p>The department of computer science and Information Technology were host to the innovative ICT workshop recently held at the college.</p>
+						</div>
+
+						<div><br><a href="#" class="right"><e>MORE NEWS...</em></a><br></div>
+					</div>
+
+					<div class="list">
+						<h3 class="title">Events</h3>
+						<hr class="divider">
+
+						<div class="list-item has-avatar">
+							<span class="avatar">
+								<span>22</span>
+								<span>JUN</span>
+							</span>
+							<h3><a href="#">End of semester exams</a></h3>
+							<p>The end of semestrer exams will start tomorrow asubuhi.</p>
+						</div>
+						<div class="list-item has-avatar">
+							<span class="avatar">
+								<span>15</span>
+								<span>JUL</span>
+							</span>
+							<h3><a href="#">Field work starts</a></h3>
+							<p>
+								iente totam odit expedita? Eius, labore com.
+							</p>
+						</div>
+						<div class="list-item has-avatar">
+							<span class="avatar">
+								<span>5</span>
+								<span>AUG</span>
+							</span>
+							<h3><a href="#">Post graduate entry</a></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quas ullam debitis pariatur sap.</p>
+						</div>
+
+						<div><br><a href="#" class="right"><e>MORE EVENTS...</em></a><br></div>
+					</div>
+					<br><br>
+					<h3 class="title">Contact us:</h3>
+
+					<div class="list">
+						<h3 class="title">Formal contacts:</h3>
+						<hr class="divider">
+						<div class="layout-flex">
+							<div class="list-item has-avatar-small">
+								<span class="avatar small circle">
+									<span class="zmdi zmdi-phone"></span>
+								</span>
+								<h3><a href="#">Phone</a></h3>
+								<p>+255 - 717138056</p>
+							</div>
+							<span>&emsp;</span>
+							<div class="list-item has-avatar-small">
+								<span class="avatar small circle">
+									<span class="zmdi zmdi-email"></span>
+								</span>
+								<h3><a href="#">Email</a></h3>
+								<p>bcsifm@gmail.com</p>
+							</div>
+						</div>
+					</div>
+					<div class="list">
+						<h3 class="title">Social networks</h3>
+						<hr class="divider">
+						<div class="layout-flex social-icons">
+							<a title="Like our facebook page" target="_blank" href="facebook.com/ifmbcs" class="avatar fb">
+								<span class="zmdi zmdi-facebook"></span>
+							</a>
+							<a title="Follow us on twitter" target="_blank" href="twitter.com/ifmbcs" class="avatar twitter">
+								<span class="zmdi zmdi-twitter"></span>
+							</a>
+							<a title="Follow us on instagram" target="_blank" href="instagram.com/ifmbcs" class="avatar insta">
+								<span class="zmdi zmdi-instagram"></span>
+							</a>
+							<a title="Follow us on google plus" target="_blank" href="plus.google.com/ifmbcs" class="avatar gplus">
+								<span class="zmdi zmdi-google-plus"></span>
+							</a>
+						</div>
+					</div>
+				</div>
 			</section>
 		</div>
-		<aside style="opacity: 0"></aside>
-		<aside class="shadow-2dp" style="position: fixed;top:0;right:0;padding: 0 15px;padding-top: 155px;">
-			<h2>News feed</h2>
-			<hr class="divider">
-		</aside>
 	</div>
+	<footer>
+		<div class="copyright">
+			Copyright &copy; BCS IFM 2016.
+		</div>
+	</footer>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
