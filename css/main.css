@@ -465,7 +465,7 @@ aside > ul li a:hover::after, aside > ul li.active a::after{
 }
 @media all and (max-width: 992px) {
   #content{
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 110px);
   }
 }
 section{
@@ -606,7 +606,7 @@ footer > .copyright{
   left: 0;
   width: 100%;
   height: 70px;
-  line-height: 80px;
+  line-height: 70px;
   color: #fff;
   background: #66BB6A;
 }
