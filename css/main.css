@@ -722,7 +722,7 @@ footer > .copyright{
 }
 .card > .card-content .caption{
   position: relative;
-  max-height: 60px;
+  max-height: 140px;
   width: 50%;
   overflow: hidden;
 }
@@ -730,7 +730,7 @@ footer > .copyright{
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  max-height: 60px;
+  max-height: 20px;
   margin-top: 3px;
 }
 .card > .card-content .caption h3{
