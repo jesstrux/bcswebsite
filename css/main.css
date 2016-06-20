@@ -51,6 +51,24 @@ body.locked{
 .text-justify{
   text-align: justify;
 }
+.orange{
+  background: orange !important;
+}
+select{
+  padding: 0 5px;
+  height: 50px;
+  font-size: 25px;
+  color: #888;
+  display: block;
+}
+.page-subheader{
+  padding: 10px 120px; font-size: 23px
+}
+@media all and (max-width: 992px){
+  .page-subheader{
+    padding: 10px;
+  } 
+}
 #shadow{
   position: fixed;
   top: 0;left: 0;
@@ -132,6 +150,11 @@ body.locked{
 @media all and (max-width: 992px){
   #shadow.darkened ~ .more-btn{
     display: block;
+  }
+}
+@media all and (min-width: 992px){
+  #shadow.darkened ~ .more-btn{
+    display: none;
   }
 }
 #shadow.show{
@@ -501,6 +524,12 @@ section > p{
     padding: 0 10px !important; font-size: 18px !important;
   }
 }
+.section-title{
+  margin: 0;
+  font-size: 32px;
+  font-family: sans-serif;
+  font-weight: 300
+}
 /*******************
   END MAIN LAYOUT STYLES
 ********************/
@@ -553,6 +582,12 @@ section > p{
 }
 .btn:hover{
   background: #66BB6A;
+}
+.btn-small{
+  height: 25px;
+  line-height: 25px;
+  padding: 3px 15px;
+  min-width: 50px;
 }
 .btn-flat{
   box-shadow: none;
@@ -628,7 +663,13 @@ footer > .copyright{
   font-size: 20px; font-weight: 300; margin-bottom: 0;
 }
 .list-item{
+  display: block;
   margin: 15px 0;
+  padding: 0 10px;
+  color:#555;
+}
+.list-item:active, .list-item:visited, .list-item:focus{
+  color:#555;
 }
 .list-item.has-avatar{
   position: relative;
@@ -726,6 +767,18 @@ footer > .copyright{
   width: 50%;
   overflow: hidden;
 }
+.col-6 > .card .caption{
+  max-width: 400px;
+  white-space: nowrap;
+}
+.col-4 > .card .caption{
+  max-width: 200px;
+  white-space: nowrap;
+}
+.col-3 > .card .caption{
+  max-width: 200px;
+  white-space: nowrap;
+}
 .card > .card-content .caption h3, .card > .card-content .caption p{
   overflow: hidden;
   -ms-text-overflow: ellipsis;
@@ -734,6 +787,7 @@ footer > .copyright{
   margin-top: 3px;
 }
 .card > .card-content .caption h3{
+  max-height: 25px;
   color: #4CAF50;
 }
 .card > .card-content .caption ~ .layout-flex{
@@ -744,9 +798,11 @@ footer > .copyright{
 }
 .card.preview{
   position: fixed;
-  width: 600px; height: 530px;
+  width: 600px; max-height: 530px;
   z-index: 999;
-  top: calc(50% - 260px);left: calc(50vw - 300px);
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  margin: auto;
 }
 .card.preview img{
   height: 350px;
@@ -754,6 +810,10 @@ footer > .copyright{
 .card.preview > .card-content .caption{
   max-height: 160px;
   padding: 0 10px;
+}
+.col > .card.preview .caption{
+  max-width: 100%;
+  white-space: normal;
 }
 .card.preview .caption p span{
   display: inline;
@@ -772,6 +832,13 @@ footer > .copyright{
 }
 
 @media all and (max-width: 992px){
+  .card:first-child{
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
+  }
+  .col .caption{
+    min-width: 250px;
+    max-width: 250px;
+  }
   .card.preview{
     position: fixed;
     width: 100%; height: 100vh;
@@ -835,6 +902,9 @@ footer > .copyright{
 }
 .col.col-4{
   width: calc(33.333% - 10px);
+}
+.col.col-5{
+  width: calc(41.667% - 10px);
 }
 .col.col-6{
   width: calc(50% - 10px);
@@ -907,6 +977,135 @@ footer > .copyright{
   background-position: top center;
   widt:95%;lef:3.5%;margin-top: -10px; min-height: 350px;padding: 15px 0; margin-bottom: 50px;"
 }
+/*MENU*/
+.menu{
+  display: none;
+  position: absolute;top: 15px; right:20px;
+  z-index: 100000000000000000; background: #fff;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: top right;
+  transition: all .15s ease-in-out;
+}
+@media all and (min-width: 992px){
+  .menu{
+    display: none;
+  }
+}
+.menu.show{
+  display: block;
+  pointer-events: auto;
+  opacity: 1;
+  transform: none;
+}
+.menu .list-item{
+  margin: 0;
+  padding: 12px;
+  border-radius: 3px;
+}
+/*END MENU*/
+/*DOCUMENT*/
+.document {
+    position:relative;
+    width:100%; min-height: 240px;
+    margin:2em auto;
+    color:#fff;
+    background:#97C02F;
+    overflow:hidden;
+    font-size: 1.8em;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.document i{
+  display: block;
+  font-size: 60px;margin: 15px 0;
+}
+.document p {margin:0;}
+.document a {
+  display: block;
+  margin: 20px 0;
+  font-size: 20px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  font-family: verdana;
+}
+.document:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    border-width:0 56px 40px 0; /* This trick side-steps a webkit bug */
+    border-style:solid;
+    border-color:#fff #fff #658E15 #658E15; /* A bit more verbose to work with .rounded too */
+    background:#658E15; /* For when also applying a border-radius */
+    display:block; width:0; /* Only for Firefox 3.0 damage limitation */
+    /* Optional: shadow */
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.document.red {background:#C93213;}
+.document.red:before {border-color:#fff #fff #97010A #97010A; background:#97010A;}
+
+.document.blue {background:#53A3B4;}
+.document.blue:before {border-color:#fff #fff transparent transparent; background:transparent;}
+
+.document.taupe {background:#999868;}
+.document.taupe:before {border-color:#fff #fff #BDBB8B #BDBB8B; background:#BDBB8B;}
+
+/* ROUNDED CORNERS VERSION
+ * All modern browsers can produce this effect with a single pseudo-element.
+ * However, they all have bugs (mainly to do with border-radius) that make this a bit tricky.
+ * As far as I can tell, this is the only cross-browser method for the moment.
+ * Can't use this method for the simple effect because Opera 11 will only show backgrounds
+ * through transparent borders if there is a border-radius applied.
+ */
+
+.document.rounded {
+    -webkit-border-radius:5px 0 5px 5px;
+    -moz-border-radius:5px 0 5px 5px;
+    border-radius:5px 0 5px 5px;
+}
+
+.document.rounded:before {
+    border-width:22px; /* Triggers a 1px 'step' along the diagonal in Safari 5 (and Chrome 10) */
+    border-color:#fff #fff transparent transparent; /* Avoids the 1px 'step' in webkit. Background colour shows through */
+    -webkit-border-bottom-left-radius:5px;
+    -moz-border-radius:0 0 0 5px;
+    border-radius:0 0 0 5px;
+}
+/*.document p + p {margin:1.5em 0 0;}*/
+/*END DOCUMENT*/
+/*SUCCESSS CHART*/
+#success-chart{
+  width:100%;height: 380px;
+  margin: 70px 0;
+  padding: 10px 0
+}
+#success-chart > .col{
+  max-height: 330px;
+}
+@media all and (max-width: 992px){
+  #success-chart{
+    height: 660px;
+    margin-bottom: 40px;
+    padding: 10px 0
+  }
+  #success-chart > .col{
+    max-height: 330px;
+  }
+}
+/*END SUCCESS CHART*/
 /*GALLERY*/
 #gallery > img{
   width: 33%;
@@ -929,7 +1128,6 @@ footer > .copyright{
   z-index: 9999;
   opacity: 0;
   pointer-events: none;
-
   transition: all 0.2s ease-in-out;
 }
 .preview-image.preview{
@@ -939,6 +1137,7 @@ footer > .copyright{
   max-height: calc(100% - 160px);
   pointer-events: auto;
   opacity: 1;
+  transition: none;
 }
 @media all and (max-width: 992px){
   .preview-image{
@@ -1087,6 +1286,9 @@ footer > .copyright{
   .center-text-on-less-lg{
     text-align: center;
   }
+  .center-on-less-lg{
+    margin: auto;
+  }
   .show-on-lg-only{
     display: none;
   }
@@ -1104,6 +1306,9 @@ footer > .copyright{
   }
   .show-on-sm-only{
     display: none;
+  }
+  .center-on-lg{
+    margin: auto;
   }
 }
 
