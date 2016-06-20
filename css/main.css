@@ -1049,9 +1049,9 @@ footer > .copyright{
     background:#658E15; /* For when also applying a border-radius */
     display:block; width:0; /* Only for Firefox 3.0 damage limitation */
     /* Optional: shadow */
-    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    /*-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
     -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
-    box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);*/
 }
 
 .document.red {background:#C93213;}
@@ -1097,12 +1097,12 @@ footer > .copyright{
 }
 @media all and (max-width: 992px){
   #success-chart{
-    height: 660px;
+    height: 680px;
     margin-bottom: 40px;
     padding: 10px 0
   }
   #success-chart > .col{
-    max-height: 330px;
+    max-height: 340px;
   }
 }
 /*END SUCCESS CHART*/
@@ -1297,6 +1297,15 @@ footer > .copyright{
   }
   .full-width-on-sm{
     width: 100vw;
+  }
+  .padding-h-on-sm{
+    padding: 0 10px;
+  }
+  .inset-on-sm{
+    padding-left: 10px;
+  }
+  .inset-on-sm + .section-sub{
+    margin-left: -30px;
   }
 }
 
