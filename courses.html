@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<meta name="theme-color" content="#4CAF50">
+	<title>IFM - CS</title>
+	<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="shadow" class="layout-flex center-center as-column" onclick="goBack()">
+		<i class="zmdi zmdi-globe animated bounce infinite"></i>
+		<br>
+		<span class="animated infinite tada">loading....</span>
+	</div>
+	<i class="zmdi shadow-closer" onclick="goBack()"></i>
+	<header class="shadow-2dp">
+		<a href="javascript:void(0);" class="btn btn-flat header-btn" style="align-self: center;" onclick="toggleMenu()"><i class="zmdi zmdi-menu"></i></a>
+		<div class="logo"><a href="index.html">Computer Science IFM</a></div>
+	</header>
+	<nav class="shadow-2dp">
+		<div class="cover-photo placeholder-bg" style="height: 200px;"></div>
+		<ul>
+			<li><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
+			<li><a href="about.html"><i class="zmdi zmdi-info-outline"></i>About us</a></li>
+			<li class="active"><a href="courses.html"><i class="zmdi zmdi-collection-item"></i>Courses</a></li>
+			<li><a href="gallery.html"><i class="zmdi zmdi-collection-image"></i>Gallery</a></li>
+		</ul>
+	</nav>
+	<div id="main">
+		<div id="content">
+			<section class="placeholder-bg layout-flex as-column center-center">
+				<br>
+				<h1 style="font-size: 35px; margin-bottom: 0;">Courses</h1>
+				<p class="page-subheader">
+					We offer courses for certificate, diploma, bachelor and masters levels, listed below is a list of all those courses.
+				</p>
+
+				<a class="show-on-lg-only" style="font-family: verdana;font-size: 20px; color: orange; text-transform: none; display: block;" href="javascript:void(0);" >
+					<span style="display: block;">courses picker</span>
+					<span style="font-size: 30px;margin-top: 10px;" class="zmdi zmdi-open-in-new"></span>
+				</a>
+				<br><br>
+			</section>
+			<br><br>
+			<section>
+				<div class="center-text-on-less-lg">
+					<h3 class="section-title">Masters courses</h3>
+					<span class="section-sub">30 in total</span>
+				</div>
+				<div class="row" style="margin-top: -20px;">
+					<div class="col col-3">
+						<div class="document red rounded text-center">
+							<i class="zmdi zmdi-toys"></i>
+							<p>Multimedia and Common Graphics</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="document red rounded text-center">
+							<i class="zmdi zmdi-accounts"></i>
+							<p>Team Collaboration Skills</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+				</div>
+				<div class="center-text-on-less-lg">
+					<h3 class="section-title">Bachelor courses</h3>
+					<span class="section-sub">50 in total</span>
+				</div>
+				<div class="row" style="margin-top: -20px;">
+					<div class="col col-3">
+						<div class="document rounded text-center">
+							<i class="zmdi zmdi-devices"></i>
+							<p>Mobile &amp; Desktop App Development</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="document rounded text-center">
+							<i class="zmdi zmdi-github"></i>
+							<p>Version Control(Github)</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="document rounded text-center">
+							<i class="zmdi zmdi-polymer"></i>
+							<p>Modern Web Apps Development</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+				</div>
+				<div class="center-text-on-less-lg">
+					<h3 class="section-title">Diploma courses</h3>
+					<span class="section-sub">25 in total</span>
+				</div>
+				<div class="row" style="margin-top: -20px;">
+					<div class="col col-3">
+						<div class="document blue rounded text-center">
+							<i class="zmdi zmdi-smartphone-android"></i>
+							<p>Mobile App Development Basics</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="document blue rounded text-center">
+							<i class="zmdi zmdi-view-web"></i>
+							<p>Introduction to Web Development</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="center-text-on-less-lg">
+					<h3 class="section-title">Certificate courses</h3>
+					<span class="section-sub">20 in total</span>
+				</div>
+				<div class="row" style="margin-top: -20px;">
+					<div class="col col-3">
+						<div class="document taupe rounded text-center">
+							<i class="zmdi zmdi-windows"></i>
+							<p>Computer Basics</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+					<div class="col col-3">
+						<div class="document taupe rounded text-center">
+							<i class="zmdi zmdi-view-web"></i>
+							<p>Introduction to HTML &amp; CSS</p>
+							<a href="#">view more</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+	<footer>
+		<div class="copyright">
+			Copyright &copy; BCS IFM 2016.
+		</div>
+	</footer>
+	<script src="js/scripts.js"></script>
+	<script src="js/courses-page-scripts.js"></script>
+</body>
+</html>

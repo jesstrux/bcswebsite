@@ -10,18 +10,17 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div id="shadow" class="layout-flex center-center as-column" onclick="removeShadow()">
+	<div id="shadow" class="layout-flex center-center as-column" onclick="goBack()">
 		<i class="zmdi zmdi-globe animated bounce infinite"></i>
 		<br>
 		<span class="animated infinite tada">loading....</span>
 	</div>
+	<i class="zmdi shadow-closer" onclick="goBack()"></i>
 	<img src="images/girls.jpg" alt="" class="preview-image">
 	<audio src="music/suddenly.mp3"></audio>
-	<i class="zmdi shadow-closer" onclick="removeShadow()"></i>
-	<i class="zmdi more-btn" onclick="showMenu()"></i>
+	<i class="zmdi more-btn" onclick="showMoreMenu()"></i>
 	<div id="slide-show-container"></div>
 	<div id="caption"></div>
-
 	<header class="shadow-2dp">
 		<a href="javascript:void(0);" class="btn btn-flat header-btn" style="align-self: center;" onclick="toggleMenu()"><i class="zmdi zmdi-menu"></i></a>
 		<div class="logo"><a href="index.html">Computer Science IFM</a></div>
@@ -31,9 +30,8 @@
 		<ul>
 			<li><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
 			<li><a href="about.html"><i class="zmdi zmdi-info-outline"></i>About us</a></li>
-			<li><a href="#"><i class="zmdi zmdi-accounts"></i>Staff</a></li>
-			<li><a href="#"><i class="zmdi zmdi-collection-item"></i>Courses</a></li>
-			<li class="active"><a href="#"><i class="zmdi zmdi-collection-image"></i>Gallery</a></li>
+			<li><a href="courses.html"><i class="zmdi zmdi-collection-item"></i>Courses</a></li>
+			<li class="active"><a href="gallery.html"><i class="zmdi zmdi-collection-image"></i>Gallery</a></li>
 		</ul>
 	</nav>
 	<div id="main">
@@ -68,6 +66,19 @@
 			Copyright &copy; BCS IFM 2016.
 		</div>
 	</footer>
+
+	<div class="menu js-preview-menu">
+		<a href="javascript:void(0);" onclick="playSlideShowClicked()" class="list-item">Slideshow</a>
+		<a href="javascript:void(0);" onclick="goBack()" class="list-item">
+		Cancel</a>
+	</div>
+
+	<div class="menu js-slideshow-menu">
+		<a href="javascript:void(0);" onclick="toggleSlideShowClicked()" class="list-item js-slideshow-toggler">Stop slideshow</a>
+		<a href="javascript:void(0);" onclick="toggleMusicClicked()" class="list-item js-audio-toggler">Pause music</a>
+		<a href="javascript:void(0);" onclick="playNextSongClicked()" class="list-item">Next Song</a>
+	</div>
 	<script src="js/scripts.js"></script>
+	<script src="js/gallery-page-scripts.js"></script>
 </body>
 </html>
