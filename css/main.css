@@ -981,7 +981,7 @@ footer > .copyright{
 /*MENU*/
 .menu{
   display: none;
-  position: absolute;top: 15px; right:20px;
+  position: fixed;top: 15px; right:20px;
   z-index: 100000000000000000; background: #fff;
   overflow: hidden;
   pointer-events: none;
