@@ -79,7 +79,7 @@ body.locked{
 .shadow-closer{
   position: fixed;
   top: 0; right: 0;
-  font-size:30px;
+  font-size:22px;
   z-index: 999999999;
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
@@ -115,7 +115,7 @@ body.locked{
 .more-btn{
   position: fixed;
   top: 1px; right: 0;
-  font-size:30px;
+  font-size:22px;
   z-index: 999999999;
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
